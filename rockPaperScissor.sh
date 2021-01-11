@@ -38,5 +38,5 @@ then
  then
      echo "The computer scissors won "
    else
-     echo " choice=$choice and comguess=$computer"
+     echo " choice=$choice and comguess=$comguess"
    fi
