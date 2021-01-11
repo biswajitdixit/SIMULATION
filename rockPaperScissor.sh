@@ -16,27 +16,27 @@ read choice
  then
     echo " TIED!"
 
-   elif [ $choice -eq 1 -a $comguess -eq 3 ]
+   elif [ $choice -eq 1 ] && [ $comguess -eq 3 ]
  then
      echo " your rock won "
      wins=$(( $wins + 1 ))
-   elif [ $choice -eq 2 -a $comguess -eq 1 ]
+   elif [ $choice -eq 2 ] && [ $comguess -eq 1 ]
  then
      echo "your paper won"
      wins=$(( $wins + 1 ))
-   elif [ $choice -eq 3 -a $comguess -eq 2 ]
+   elif [ $choice -eq 3 ] && [ $comguess -eq 2 ]
 then
      echo -n "Your scissors cut - and beat - the computer paper "
      wins=$(( $wins + 1 ))
-   elif [ $choice -eq 3 -a $comguess -eq 1 ]
+   elif [ $choice -eq 3 ] && [ $comguess -eq 1 ]
  then
      echo " computer rock won"
 
-   elif [ $choice -eq 1 -a $comguess -eq 2 ]
+   elif [ $choice -eq 1 ] && [ $comguess -eq 2 ]
  then
      echo " computer paper won "
 
-   elif [ $choice -eq 2 -a $comguess-eq 3 ]
+   elif [ $choice -eq 2 ] && [ $comguess-eq 3 ]
  then
      echo -n "The computer's scissors cut - and beat your paper "
    else
