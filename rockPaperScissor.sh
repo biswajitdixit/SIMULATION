@@ -1,7 +1,5 @@
 #!/bin/bash
 
-comguess=$(( ($RANDOM % 3) + 1 ))
-rps=(no rock paper scissors)
 
 declare -a rps;
 comguess=$(( ($RANDOM % 3) + 1 ))
@@ -19,15 +17,15 @@ read choice
    elif [ $choice -eq 1 ] && [ $comguess -eq 3 ]
  then
      echo " your rock won "
-     wins=$(( $wins + 1 ))
+    
    elif [ $choice -eq 2 ] && [ $comguess -eq 1 ]
  then
      echo "your paper won"
-     wins=$(( $wins + 1 ))
+     
    elif [ $choice -eq 3 ] && [ $comguess -eq 2 ]
 then
-     echo -n "Your scissors cut - and beat - the computer paper "
-     wins=$(( $wins + 1 ))
+     echo "Your scissors won "
+     
    elif [ $choice -eq 3 ] && [ $comguess -eq 1 ]
  then
      echo " computer rock won"
@@ -38,7 +36,7 @@ then
 
    elif [ $choice -eq 2 ] && [ $comguess-eq 3 ]
  then
-     echo -n "The computer's scissors cut - and beat your paper "
+     echo "The computer scissors won "
    else
      echo " choice=$choice and comguess=$computer"
    fi
